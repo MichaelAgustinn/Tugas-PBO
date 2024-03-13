@@ -110,6 +110,7 @@ public class no7 {
                 MatKul mk = new MatKul(kode, nama, sks, nilai);
                 bacaData.add(mk);
             }
+            System.out.println(bacaData.get(1));
             sc.close();
         } catch (FileNotFoundException ex) {
             Logger.getLogger(no7.class.getName()).log(Level.SEVERE, null, ex);
@@ -139,6 +140,7 @@ public class no7 {
     // menu save to file end
 
     public static void main(String[] args) {
+        
         Scanner in = new Scanner(System.in);
         no7 n7 = new no7();
         n7.open();
@@ -239,6 +241,7 @@ public class no7 {
                 case 5:
                     System.out.println("setFile");
                     System.out.println("Masukkan Nama File Data: ");
+                    in.nextLine();
                     String namaFile = in.nextLine();
                     n7.setFile(namaFile);
                     break;
