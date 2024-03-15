@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class no14 {
-    ArrayList<String> bacaFile = new ArrayList<>();
-
     public static void main(String[] args) {
         try {
             ArrayList<String> bacaData = new ArrayList<>();

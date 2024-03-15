@@ -14,6 +14,21 @@ public class no7 {
     public ArrayList<MatKul> bacaData = new ArrayList<>();
     String namaFile = "src/TugasPraktikum2/data.csv";
 
+    public void menu() {
+        System.out.println("---------------------------------");
+        System.out.println("Pilih Menu");
+        System.out.println("[0] exit");
+        System.out.println("[1] insert");
+        System.out.println("[2] update");
+        System.out.println("[3] delete");
+        System.out.println("[4] print");
+        System.out.println("[5] setFile");
+        System.out.println("[6] reset");
+        System.out.println("[7] open");
+        System.out.println("[8] save to file");
+        System.out.println("---------------------------------");
+    }
+
     // menu insert area
     public boolean insert(String kode, String nama, int sks, String nilai) {
         boolean hasil = false;
@@ -46,7 +61,7 @@ public class no7 {
     public boolean remove(int index) {
         boolean hasil = false;
         try {
-            bacaData.remove(index);
+            bacaData.remove(index-1);
             hasil = true;
         } catch (Exception e) {
             hasil = false;
@@ -57,11 +72,13 @@ public class no7 {
 
     // menu print area
     public String toString() {
+        int nomor = 1;
         if (bacaData != null) {
             StringBuffer sb = new StringBuffer();
             sb.append("Kode MK | Matakuliah | SKS | Nilai\n");
             for (MatKul mk : bacaData) {
-                sb.append(mk.kode + " | " + mk.nama + " | " + mk.sks + " | " + mk.nilai + "\n");
+                sb.append("[" + nomor + "]  " + mk.kode + " | " + mk.nama + " | " + mk.sks + " | " + mk.nilai + "\n");
+                nomor++;
             }
             return sb.toString();
         } else {
@@ -140,25 +157,14 @@ public class no7 {
     // menu save to file end
 
     public static void main(String[] args) {
-        
+
         Scanner in = new Scanner(System.in);
         no7 n7 = new no7();
         n7.open();
-        boolean running = true;
 
+        boolean running = true;
         while (running) {
-            System.out.println("---------------------------------");
-            System.out.println("Pilih Menu");
-            System.out.println("[0] exit");
-            System.out.println("[1] insert");
-            System.out.println("[2] update");
-            System.out.println("[3] delete");
-            System.out.println("[4] print");
-            System.out.println("[5] setFile");
-            System.out.println("[6] reset");
-            System.out.println("[7] open");
-            System.out.println("[8] save to file");
-            System.out.println("---------------------------------");
+            n7.menu();
             System.out.print("Menu Yang Anda Pilih: ");
             int pilih = in.nextInt();
 
@@ -218,7 +224,7 @@ public class no7 {
                     index = in.nextInt();
                     in.nextLine();
                     System.out.print("Matkul Yang Akan Dihapus  :  ");
-                    status = n7.print(index);
+                    status = n7.print(index-1);
                     if (status == true) {
                         System.out.println("Apakah Anda Yakin Akan Menghapus Data [Y] / [N]");
                         String confirm = in.nextLine();

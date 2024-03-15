@@ -1,60 +1,39 @@
 package pbo;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Vector;
 
 public class Pbo {
-
-    ArrayList<MatKul> transkrip = new ArrayList<>();
-    String namaFile = "src/pbo/data.csv"; 
-
-// menu open
-public ArrayList<MatKul> open(){
-    File bacaFile = new File("src/pbo/data.csv");
-    return null;
-}
-// menu open end
-
     public static void main(String[] args) {
-                int[][][] arrayRGB = new int[4][4][3];
+        Vector<Double> uhuyy = new Vector<Double>();
+        double[][] data = {
+                { 91.35, 4.72, 26, 3.5, 8, 61, 65.36, 12, 5.6, 7.11 },
+                { 27, 9.53, 549, 2.23, 17.31, 4.25, 2.13, 83, 7, 102.4 },
+                { 53.21, 3.42, 0.21, 70.02, 819.4, 6173, 4.25, 19.8, 17.32, 5.768 }
+        };
 
+        for (int i = 0; i < data.length; i++) {
+            for (int j = 0; j < data[i].length; j++) {
+                uhuyy.add(data[i][j]);
+            }
+        }
 
-        
-                arrayRGB[0][0] = new int[]{2, 8, 6};
-                arrayRGB[0][1] = new int[]{7, 3, 5};
-                arrayRGB[0][2] = new int[]{243, 254, 253};
-                arrayRGB[0][3] = new int[]{28, 4, 3};
-        
-                arrayRGB[1][0] = new int[]{6, 1, 2};
-                arrayRGB[1][1] = new int[]{8, 9, 1};
-                arrayRGB[1][2] = new int[]{9, 21, 3};
-                arrayRGB[1][3] = new int[]{68, 32, 5};
-        
-                arrayRGB[2][0] = new int[]{92, 92, 7};
-                arrayRGB[2][1] = new int[]{126, 42, 9};
-                arrayRGB[2][2] = new int[]{211, 12, 11};
-                arrayRGB[2][3] = new int[]{255, 6, 13};
-        
-                arrayRGB[3][0] = new int[]{0, 5, 15};
-                arrayRGB[3][1] = new int[]{4, 2, 17};
-                arrayRGB[3][2] = new int[]{83, 7, 19};
-                arrayRGB[3][3] = new int[]{38, 58, 21};
-        // System.out.println(Arrays.deepToString(arrayRGB));
-                // Menampilkan data dari array 3D
-                System.out.println("Array 3D: [baris][kolom][channel]");
-                for (int row = 0; row < 4; row++) {
-                    for (int col = 0; col < 4; col++) {
-                        System.out.println(Arrays.toString(arrayRGB[row][col]) );
-                        // for (int channel = 0; channel < 3; channel++) {
-                        //     System.out.print(arrayRGB[row][col][channel] + " ");
-                        // }
-                        // System.out.print("\t");
-                    }
-                    System.out.println();
-                }
-           
-        
+        double min = 99999;
+        double max = 0;
+        double sum = 0;
+        double avg = 0;
+
+        for (int i = 0; i < uhuyy.size(); i++) {
+            if (uhuyy.get(i) > max) {
+                max = uhuyy.get(i);
+            }
+            if (uhuyy.get(i)<min) {
+                min = uhuyy.get(i);
+            }
+            sum = sum + uhuyy.get(i);
+        }
+        avg = sum/uhuyy.size();
+
+        System.out.println("max = "+max+"\nmin = "+min+"\nsum = "+sum+"\navg = "+avg);
+
     }
-    
 }

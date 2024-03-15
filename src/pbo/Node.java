@@ -1,11 +1,13 @@
-package TugasPraktikum2;
-// ini nomor 15
+package pbo;
+
 public class Node {
     public double value;
-    public Node prev = null;
-    public Node next = null;
+    public Node next;
 
     public Node(double value) {
         this.value = value;
+        this.next = null;
     }
+
+    
 }
