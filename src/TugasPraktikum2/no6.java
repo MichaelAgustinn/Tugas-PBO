@@ -13,6 +13,8 @@ public class no6 {
             File isi = new File(namaFile);
             Scanner in = new Scanner(isi);
 
+
+
             System.out.println("Kode MK | Matakuliah | SKS | Nilai");
             // untuk melangkahi 1 baris
             in.nextLine();
@@ -28,6 +30,7 @@ public class no6 {
                 System.out.println(mk.kode + " | " + mk.nama + " | " + mk.sks + " | " + mk.nilai);
             }
             in.close();
+            System.out.println(bacaData);
         } catch (IOException ex) {
             ex.printStackTrace();
         }

@@ -1,9 +1,9 @@
 package TugasPraktikum2;
 
 public class MatKul {
-    public String kode; 
+    public String kode;
     public String nama;
-    public int sks; 
+    public int sks;
     public String nilai;
 
     public MatKul(String kode, String nama, int sks, String nilai) {
@@ -15,7 +15,6 @@ public class MatKul {
 
     @Override
     public String toString() {
-        return "MatKul{" + "kode=" + kode + ", nama=" + nama + ", nilai=" + nilai + ", sks=" + sks + '}';
+        return "MatKul [kode=" + kode + ", nama=" + nama + ", sks=" + sks + ", nilai=" + nilai + "]";
     }
-    
 }

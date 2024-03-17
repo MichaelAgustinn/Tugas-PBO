@@ -48,7 +48,7 @@ public class no7 {
         boolean hasil = false;
         try {
             MatKul mk = new MatKul(kode, nama, sks, nilai);
-            bacaData.set(index, mk);
+            bacaData.set(index - 1, mk);
             hasil = true;
         } catch (Exception e) {
             hasil = false;
@@ -61,7 +61,7 @@ public class no7 {
     public boolean remove(int index) {
         boolean hasil = false;
         try {
-            bacaData.remove(index-1);
+            bacaData.remove(index - 1);
             hasil = true;
         } catch (Exception e) {
             hasil = false;
@@ -127,7 +127,6 @@ public class no7 {
                 MatKul mk = new MatKul(kode, nama, sks, nilai);
                 bacaData.add(mk);
             }
-            System.out.println(bacaData.get(1));
             sc.close();
         } catch (FileNotFoundException ex) {
             Logger.getLogger(no7.class.getName()).log(Level.SEVERE, null, ex);
@@ -160,7 +159,6 @@ public class no7 {
 
         Scanner in = new Scanner(System.in);
         no7 n7 = new no7();
-        n7.open();
 
         boolean running = true;
         while (running) {
@@ -183,8 +181,8 @@ public class no7 {
                     String nama = in.nextLine();
                     System.out.print("Masukkan SKS Matkul      :  ");
                     int sks = in.nextInt();
-                    in.nextLine();
                     System.out.print("Masukkan Nilai Matkul       :  ");
+                    in.nextLine();
                     String nilai = in.nextLine();
                     status = n7.insert(kode, nama, sks, nilai);
                     if (status == true) {
@@ -199,7 +197,7 @@ public class no7 {
                     int index = in.nextInt();
                     in.nextLine();
                     System.out.print("Matkul Yang Akan D iUpdate  :  ");
-                    status = n7.print(index);
+                    status = n7.print(index - 1);
                     if (status == true) {
                         System.out.print("Masukkan Kode Matkul        :  ");
                         kode = in.nextLine();
@@ -224,7 +222,7 @@ public class no7 {
                     index = in.nextInt();
                     in.nextLine();
                     System.out.print("Matkul Yang Akan Dihapus  :  ");
-                    status = n7.print(index-1);
+                    status = n7.print(index - 1);
                     if (status == true) {
                         System.out.println("Apakah Anda Yakin Akan Menghapus Data [Y] / [N]");
                         String confirm = in.nextLine();

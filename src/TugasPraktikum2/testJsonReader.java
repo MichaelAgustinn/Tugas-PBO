@@ -2,8 +2,7 @@ package TugasPraktikum2;
 
 import java.util.ArrayList;
 
-public class no8 {
-
+public class testJsonReader {
     public static void main(String[] args) {
         String address = "src/TugasPraktikum2/data.json";
         jsonReader jsr = new jsonReader();

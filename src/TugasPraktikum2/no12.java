@@ -17,7 +17,7 @@ public class no12 {
                 arrayRGB[i][j][0] = r[k];
                 arrayRGB[i][j][1] = g[k];
                 arrayRGB[i][j][2] = b[k];
-                arrayGrayscale[i][j] = Math.ceil((r[k] + g[k] + b[k]) / 3.0);
+                arrayGrayscale[i][j] = Math.round((r[k] + g[k] + b[k]) / 3.0);
                 k++;
             }
         }
