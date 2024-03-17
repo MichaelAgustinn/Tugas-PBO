@@ -84,6 +84,7 @@ public class BikinArrayList2 {
         }
         return result;
     }
+
     // method remove end
 
     // method size area
