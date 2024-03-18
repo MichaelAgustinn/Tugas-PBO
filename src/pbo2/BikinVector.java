@@ -1,20 +1,21 @@
 package pbo2;
 
-public class BikinArrayList2 {
+public class BikinVector {
     int MAX_SIZE = 10;
-    int[] data = new int[MAX_SIZE];
+    Double[] data = new Double[MAX_SIZE];
     int index = -1;
 
-    // method isEmpty area
+    // method isEmpty
     public boolean isEmpty() {
+        boolean result = false;
         if (index < 0) {
-            return true;
+            result = true;
         }
-        return false;
+        return result;
     }
     // method isEmpty end
 
-    // method print area
+    // metod toString
     public String toString() {
         String isi = "[";
         if (index >= 0) {
@@ -28,37 +29,37 @@ public class BikinArrayList2 {
         isi += "]";
         return isi;
     }
-    // method print end
+    // method toString end
 
-    // method add area
-    public void add(int value) {
+    // method add
+    public void add(double value) {
         index++;
         if (index >= MAX_SIZE) {
             MAX_SIZE += 10;
-            int[] newData = new int[MAX_SIZE];
-            for (int i = 0; i < data.length; i++) {
-                newData[i] = data[i];
+            Double[] dataBaru = new Double[MAX_SIZE];
+            for (int i = 0; i < dataBaru.length; i++) {
+                dataBaru[i] = data[i];
             }
-            data = newData;
+            data = dataBaru;
         }
         data[index] = value;
     }
     // method add end
 
-    // method get area
-    public Integer get(int i) {
-        Integer result = null;
-        if (i <= index && i >= 0) {
+    // method get
+    public Double get(int i) {
+        Double result = null;
+        if (i >= 0 && i <= index) {
             result = data[i];
         }
         return result;
     }
     // method get end
 
-    // method set area
-    public boolean set(int i, int value) {
+    // method set
+    public boolean set(int i, Double value) {
         boolean result = false;
-        if (i <= index && i >= 0) {
+        if (i >= 0 && i <= index) {
             data[i] = value;
             result = true;
         }
@@ -73,7 +74,7 @@ public class BikinArrayList2 {
             for (int j = i; j < index; j++) {
                 data[j] = data[j + 1];
             }
-            data[index] = 0;
+            data[index] = 0.0;
             if (i != index) {
                 index--;
             }
@@ -98,10 +99,9 @@ public class BikinArrayList2 {
 
     // method clear area
     public void clear() {
-        int[] dataBaru = new int[MAX_SIZE];
+        Double[] dataBaru = new Double[MAX_SIZE];
         data = dataBaru;
         index = -1;
     }
     // method clear end
-
 }

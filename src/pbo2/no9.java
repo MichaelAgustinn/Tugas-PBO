@@ -2,7 +2,7 @@ package pbo2;
 
 public class no9 {
     public static void main(String[] args) {
-        bikinArrayL data = new bikinArrayL();
+        BikinArrayList2 data = new BikinArrayList2();
 
         data.add(123);
 

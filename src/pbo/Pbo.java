@@ -1,17 +1,13 @@
 package pbo;
 
-import java.util.Vector;
+import java.util.HashMap;
 
 public class Pbo {
     public static void main(String[] args) {
-        Vector<Double> testing = new Vector<>();
+        HashMap<Integer, String> test = new HashMap<Integer, String>();
+        test.put(2, "11");
+        test.put(1, "22");
 
-        testing.add(1241.0);
-        testing.add(1241.0);
-        testing.add(1241.0);
-        testing.add(1241.0);
-        testing.add(1241.0);
-
-        testing.get(2);
+        System.out.println(test);
     }
 }
