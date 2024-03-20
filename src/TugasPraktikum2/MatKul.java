@@ -15,6 +15,6 @@ public class MatKul {
 
     @Override
     public String toString() {
-        return "MatKul [kode=" + kode + ", nama=" + nama + ", sks=" + sks + ", nilai=" + nilai + "]";
+        return "[kode=" + kode + ", nama=" + nama + ", sks=" + sks + ", nilai=" + nilai + "]";
     }
 }

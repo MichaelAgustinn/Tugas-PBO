@@ -98,6 +98,7 @@ public class BikinArrayList2 {
 
     // method clear area
     public void clear() {
+        MAX_SIZE = 10;
         int[] dataBaru = new int[MAX_SIZE];
         data = dataBaru;
         index = -1;

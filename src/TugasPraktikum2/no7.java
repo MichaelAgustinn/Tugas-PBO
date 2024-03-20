@@ -13,7 +13,7 @@ public class no7 {
 
     public ArrayList<MatKul> bacaData = new ArrayList<>();
     String namaFile = "src/TugasPraktikum2/data.csv";
-
+    
     public void menu() {
         System.out.println("---------------------------------");
         System.out.println("Pilih Menu");

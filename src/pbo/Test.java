@@ -24,13 +24,27 @@ public class Test {
             for (int j = 0; j < 4; j++) {
                 int kali1 = a[0][0] * b[j][k];
                 tambah1 = tambah1 + kali1;
-                System.out.print(kali1 + " ");
             }
-            System.out.println();
             k++;
         }
+        System.out.print(tambah1 + " ");
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                int kali1 = a[0][1] * b[j][i];
+                tambah1 = tambah1 + kali1;
+            }
+            k++;
+        }
+        System.out.print(tambah1 + " ");
 
-        
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                int kali1 = a[0][2] * b[j][i];
+                tambah1 = tambah1 + kali1;
+            }
+            k++;
+        }
+        System.out.print(tambah1 + " ");
 
         // for (int i = 0; i < 1; i++) {
         // for (int j = 0; j < a[i].length; j++) {
