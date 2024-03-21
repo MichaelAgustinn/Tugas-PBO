@@ -1,9 +1,9 @@
-package pbo;
+package TugasPraktikum3;
 
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Pbo {
+public class no5 {
     public static void main(String[] args) {
         HashMap<String, String> dataMhs = new HashMap<String, String>();
         Scanner in = new Scanner(System.in);
@@ -17,6 +17,10 @@ public class Pbo {
             String value = in.nextLine();
             dataMhs.put(key, value);
         }
-        
+        for (String nim : dataMhs.keySet()) {
+            String nama = dataMhs.get(nim);
+            System.out.println("Nim: " + nim + ", Nama: " + nama);
+        }
+        in.close();
     }
 }

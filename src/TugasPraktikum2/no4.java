@@ -6,36 +6,17 @@ public class no4 {
     public static void main(String[] args) {
         ArrayList<Double> data = new ArrayList<>();
 
-        data.add(91.35);
-        data.add(4.72);
-        data.add(26.0);
-        data.add(3.5);
-        data.add(8.0);
-        data.add(61.0);
-        data.add(65.36);
-        data.add(12.0);
-        data.add(5.6);
-        data.add(7.11);
-        data.add(27.0);
-        data.add(9.53);
-        data.add(549.0);
-        data.add(2.23);
-        data.add(17.31);
-        data.add(4.25);
-        data.add(2.13);
-        data.add(83.0);
-        data.add(7.0);
-        data.add(102.4);
-        data.add(53.21);
-        data.add(3.42);
-        data.add(0.21);
-        data.add(70.02);
-        data.add(819.4);
-        data.add(6173.0);
-        data.add(4.25);
-        data.add(19.8);
-        data.add(17.32);
-        data.add(5.768);
+        double[][] datas = {
+                { 91.35, 4.72, 26, 3.5, 8, 61, 65.36, 12, 5.6, 7.11 },
+                { 27, 9.53, 549, 2.23, 17.31, 4.25, 2.13, 83, 7, 102.4 },
+                { 53.21, 3.42, 0.21, 70.02, 819.4, 6173, 4.25, 19.8, 17.32, 5.768 }
+        };
+
+        for (int i = 0; i < datas.length; i++) {
+            for (int j = 0; j < datas[i].length; j++) {
+                data.add(datas[i][j]);
+            }
+        }
 
         double max = 0;
         double min = 99999;
