@@ -51,11 +51,14 @@ public class no6array {
     }
 
     public Integer pop() {
-        if (empty()) {
-            return null;
-        } else {
-            return data[kepala--];
+        Integer result = null;
+        if (!empty()) {
+            int simpan = data[kepala];
+            result = simpan;
+            data[kepala] = 0;
+            kepala--;
         }
+        return result;
     }
 
 }
