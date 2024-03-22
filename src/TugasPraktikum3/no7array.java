@@ -34,7 +34,14 @@ public class no7array {
         if (index < 0) {
             return null;
         }
-        return data[index--];
+        int simpan = data[0];
+        data[0] = 0;
+        for (int i = 0; i < index; i++) {
+            data[i] = data[i + 1];
+        }
+        data[index] = 0;
+        index--;
+        return simpan;
     }
 
     public Integer peek() {
