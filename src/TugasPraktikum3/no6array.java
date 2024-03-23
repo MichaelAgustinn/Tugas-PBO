@@ -2,7 +2,7 @@ package TugasPraktikum3;
 
 public class no6array {
     int kepala = -1;
-    int max_size = 10;
+    int max_size = 5;
     int[] data = new int[max_size];
 
     public boolean empty() {
@@ -11,10 +11,6 @@ public class no6array {
             result = true;
         }
         return result;
-    }
-
-    public void test() {
-        System.out.println(kepala);
     }
 
     public String toString() {

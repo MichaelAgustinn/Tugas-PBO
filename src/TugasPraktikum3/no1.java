@@ -14,7 +14,7 @@ public class no1 {
         for (int i = 0; i < nilai.length; i++) {
             data.push(nilai[i]);
         }
-        int leng = 0;
+        // int leng = 0;
         for (int i = 0; i < nilai.length; i++) {
             double simpan = data.pop();
             if (simpan < min) {
@@ -24,7 +24,7 @@ public class no1 {
                 max = simpan;
             }
             sum += simpan;
-            leng++;
+            // leng++;
         }
         double avg = sum / nilai.length;
         System.out.println(min);

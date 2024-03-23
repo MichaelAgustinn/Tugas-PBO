@@ -9,7 +9,7 @@ public class no5 {
         Scanner in = new Scanner(System.in);
 
         while (true) {
-            System.out.print("Masukkan Nim: ");
+            System.out.print("Masukkan Nim (ketik 'done' untuk berhenti): ");
             String key = in.nextLine();
             if (key.equals("done"))
                 break;
