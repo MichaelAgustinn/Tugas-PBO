@@ -1,22 +1,19 @@
 package pbo;
 
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.Stack;
 
 public class Pbo {
     public static void main(String[] args) {
-        HashMap<String, String> dataMhs = new HashMap<String, String>();
-        Scanner in = new Scanner(System.in);
+        Stack<Integer> data = new Stack<>();
 
-        while (true) {
-            System.out.print("Masukkan Nim: ");
-            String key = in.nextLine();
-            if (key.equals("done"))
-                break;
-            System.out.print("Masukkan Nama: ");
-            String value = in.nextLine();
-            dataMhs.put(key, value);
+        System.out.println(data.empty());
+        for (int i = 1; i <= 5; i++) {
+            data.push(i);
         }
-        
+        System.out.println(data.empty());
+        System.out.println(data);
+        System.out.println(data.pop());
+        System.out.println(data);
+        System.out.println(data.peek());
     }
 }

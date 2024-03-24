@@ -21,6 +21,7 @@ public class no5 {
             String nama = dataMhs.get(nim);
             System.out.println("Nim: " + nim + ", Nama: " + nama);
         }
+
         in.close();
     }
 }
